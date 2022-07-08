@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-shadow: none !important;
+}
+:root {
+  --green: #33d1cc;
+  --dark: #19283f;
+  --red: #ff3150;
+  --yellow: #ffc400;
+  --section-bg: #eff7fa;
+}
+body {
+  font-family: "roboto", tahoma, sans-serif;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Componants */
+.main-btn {
+  color: var(--yellow);
+  background-color: var(--red);
+  font-size: 14px;
+}
+.main-btn:hover {
+  color: var(--yellow);
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: var(--green);
+}
+.title h3 {
+  margin: 10px 0;
+}
+.title p {
+  font-size: 14px;
+  color: #777;
+  font-weight: bold;
+}
+.fs-7 {
+  font-size: 0.85rem;
+}
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+.light-bg {
+  background-color: var(--section-bg);
+}
+.dark-bg {
+  background-color: var(--dark);
+}
+.text-darker {
+  color: var(--dark);
+}
+.bg-yellow {
+  background-color: var(--yellow);
+}
+.text-yellow {
+  color: var(--yellow);
+}
+.text-green {
+  color: var(--green);
+}
+
+/* NavBar  */
+
+.navbar {
+  background-color: var(--dark);
+}
+
+.navbar .nav-link {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar .navbar-toggler {
+  border: 2px solid #fff;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: var(--green);
+}
+
+.navbar .search {
+  padding: 0 10px;
+  border-left: 1px solid var(--green);
+  color: var(--green);
+  margin: 0 15px;
+}
+
+/* Landing */
+.landing {
+  height: calc(100vh - 70px);
+  background-color: var(--dark);
+}
+
+/* Cards */
+.card-body i {
+  color: var(--green);
+}
+.card-body h3 {
+  color: var(--yellow);
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+.card-body p {
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Work */
+.work-row > div > div {
+  position: relative;
+  overflow: hidden;
+}
+.work-row > div > div::before {
+  content: "Application";
+  position: absolute;
+  top: 0.25rem;
+  left: -100%;
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  background-color: hsla(178, 63%, 51%, 0.8);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  transition: 0.3s;
+}
+.work-row > div > div:hover::before {
+  left: 0.25rem;
+}
+
+/* About */
+.about-text {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Team */
+.team-title {
+  color: var(--yellow);
+}
+.team-title + p {
+  max-width: 800px;
+}
+.team .card-title {
+  background-color: var(--green);
+}
+
+/* subscribe */
+.special-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+}
+.special-input::placeholder {
+  color: #fff;
+}
